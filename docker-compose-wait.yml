@@ -1,0 +1,17 @@
+version: '3'
+services:
+  service:
+    image: lapierre/s4t-azure-poc
+    entrypoint: ["/wait-for", "db:5432", "--", "/run-java.sh",  "/app.jar"]
+    ports:
+      - "8080:8080"
+#    environment:
+#      - JAVA_OPTS=-Xmx128m
+
+  db:
+    image: postgres:9.6
+    environment:
+      - POSTGRES_PASSWORD=123ewqasd
+      - POSTGRES_USER=s4t
+    ports:
+      - "5432:5432"

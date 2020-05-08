@@ -10,7 +10,7 @@
     </parent>
     <groupId>io.alapierre</groupId>
     <artifactId>azure-poc</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>azure-poc</name>
     <description>Simple Spring Cloud app for testing PaaS providers</description>
 

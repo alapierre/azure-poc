@@ -1,0 +1,8 @@
+version: '3'
+services:
+  service:
+    image: lapierre/s4t-azure-poc
+    ports:
+      - "8080:8080"
+    environment:
+      - JAVA_OPTS=-Xmx128m
