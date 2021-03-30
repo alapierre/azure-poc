@@ -10,19 +10,19 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.13.RELEASE</version>
+        <version>2.4.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>io.alapierre</groupId>
     <artifactId>azure-poc</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.4-SNAPSHOT</version>
     <name>azure-poc</name>
     <description>Simple Spring Cloud app for testing PaaS providers</description>
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Hoxton.SR3</spring-cloud.version>
+        <spring-cloud.version>2020.0.1</spring-cloud.version>
         <docker.repository>lapierre</docker.repository>
     </properties>
 
@@ -110,7 +110,7 @@
                 <artifactId>jgitflow-maven-plugin</artifactId>
                 <version>1.0-m5.1</version>
                 <configuration>
-                    <!-- see goals wiki page for configuration options -->
+                    <enableSshAgent>true</enableSshAgent>
                 </configuration>
             </plugin>
 
@@ -139,8 +139,7 @@
                     <plugin>
                         <groupId>com.spotify</groupId>
                         <artifactId>dockerfile-maven-plugin</artifactId>
-                        <version>1.4.4</version>
-
+                        <version>1.4.13</version>
                         <executions>
                             <execution>
                                 <id>default</id>
