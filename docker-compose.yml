@@ -1,8 +1,7 @@
 version: '3'
 services:
   service:
-    image: lapierre/azure-poc:0.0.4-SNAPSHOT
-    entrypoint: ["java", "-jar", "app.jar"]
+    image: lapierre/azure-poc
     ports:
       - "8080:8080"
     environment:
