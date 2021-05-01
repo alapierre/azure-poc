@@ -45,7 +45,7 @@ mvn swagger2markup:convertSwagger2markup
 # running from Docker
 
 ```shell
-docker run -e JAVA_OPTS=-Xmx128m lapierre/s4t-azure-poc
+docker run -e JAVA_OPTS=-Xmx128m -p 8080:8080 lapierre/azure-poc
 ```
 
 # running from Docker Compose
@@ -53,3 +53,8 @@ docker run -e JAVA_OPTS=-Xmx128m lapierre/s4t-azure-poc
 ```shell
 docker-compose up
 ```
+# Test app
+
+````shell
+curl http://localhost:8080/api/hello
+````
